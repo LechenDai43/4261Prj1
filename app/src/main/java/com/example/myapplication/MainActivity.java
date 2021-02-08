@@ -29,6 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
         Button loginButton = (Button)findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new LoginListener());
+
+        Button registerButton = (Button)findViewById(R.id.registerButton);
+        registerButton.setOnClickListener(new RegisterListenser());
+
+        Button forgetButton = (Button)findViewById(R.id.forgetButton);
+        forgetButton.setOnClickListener(new FogetListenser());
     }
 
     @Override
@@ -74,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             else {
                 boolean usernameError = false;
                 boolean passwordError = false;
+                boolean noErrors = true;
                 /*
                 Todo...
                     1. Check if the username is valid
@@ -85,12 +92,30 @@ public class MainActivity extends AppCompatActivity {
                 else if (passwordError) {
                     errorMessage.setText("The password is not correct.");
                 }
-                else {
+                else if (noErrors) {
                     errorMessage.setText("");
-                    Intent nextPage = new Intent(getApplicationContext(), Registration.class);
+                    Intent nextPage = new Intent(getApplicationContext(), Home.class);
                     startActivity(nextPage);
                 }
             }
+        }
+    }
+
+    class RegisterListenser implements View.OnClickListener {
+
+        @Override
+        public void onClick(View view) {
+            Intent nextPage = new Intent(getApplicationContext(), Registration.class);
+            startActivity(nextPage);
+        }
+    }
+
+    class FogetListenser implements View.OnClickListener {
+
+        @Override
+        public void onClick(View view) {
+            Intent nextPage = new Intent(getApplicationContext(), Forget.class);
+            startActivity(nextPage);
         }
     }
 }
