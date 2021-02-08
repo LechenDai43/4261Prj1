@@ -11,30 +11,30 @@ import android.widget.ImageButton;
 
 import android.os.Bundle;
 
-public class Home extends AppCompatActivity implements View.OnClickListener{
+public class Home extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        EditText searchBarTextFieldHm = (EditText) findViewById(R.id.searchBarTextFieldHm);
-        ImageButton searchButtonHm = (ImageButton) findViewById(R.id.searchButtonHm);
-        ImageButton notificationButtonHm = (ImageButton) findViewById(R.id.notificationButtonHm);
-        Button logOutButtonHm = (Button) findViewById((R.id.logOutButtonHm));
+//        EditText searchBarTextFieldHm = (EditText) findViewById(R.id.searchBarTextFieldHm);
+//        ImageButton searchButtonHm = (ImageButton) findViewById(R.id.searchButtonHm);
+//        ImageButton notificationButtonHm = (ImageButton) findViewById(R.id.notificationButtonHm);
+//        Button logOutButtonHm = (Button) findViewById((R.id.logOutButtonHm));
 
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.searchButtonHm:
-                //search from database
-                break;
-            case R.id.notificationButtonHm:
-                //notify user
-                break;
-
-        }
-    }
+//    @Override
+//    public void onClick(View v) {
+//        switch (v.getId()){
+//            case R.id.searchButtonHm:
+//                //search from database
+//                break;
+//            case R.id.notificationButtonHm:
+//                //notify user
+//                break;
+//
+//        }
+//    }
 }
