@@ -7,12 +7,9 @@ $dbpass = "wangjunkai";
 
 $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname, $dbport);
 
-if ($con) {
+if (false) {
     echo "fine";
     $result = mysqli_query($con, "select * from users;");
     echo mysqli_num_rows($result);
-}
-else {
-    echo "not fine";
 }
 ?>
