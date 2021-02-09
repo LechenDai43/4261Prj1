@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,13 +10,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.MyApplication">
-        <activity android:name=".Forget"></activity>
-        <activity android:name=".Chat"></activity>
-        <activity android:name=".Home"></activity>
-        <activity android:name=".Notification"></activity>
-        <activity android:name=".Registration"></activity>
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Invitation"></activity>
+        <activity android:name=".InviteFriend" />
+        <activity android:name=".Forget" />
+        <activity android:name=".Chat" />
+        <activity android:name=".Home" />
+        <activity android:name=".Notification" />
+        <activity android:name=".Registration" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
