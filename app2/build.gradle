@@ -36,7 +36,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.3.3'
     implementation 'androidx.navigation:navigation-ui:2.3.3'
     implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
-//    compile files('libs/*.jar')
+    compile files('libs/*.jar')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

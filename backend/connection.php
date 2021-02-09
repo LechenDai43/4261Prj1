@@ -4,6 +4,7 @@ $dbhost = "cs4261.cteat7fyzof8.us-east-1.rds.amazonaws.com";
 $dbport = "3306";
 $dbuser = "karrywang";
 $dbpass = "wangjunkai";
+$server = "localhost"
 
 $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname, $dbport);
 
