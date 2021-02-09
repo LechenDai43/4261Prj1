@@ -7,24 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".Chat">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="Your Friend" />
-
     <ImageButton
         android:id="@+id/returnHomeButtonCt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/homeAsUpIndicator" />
@@ -33,13 +21,12 @@
         android:id="@+id/inputTextFieldCt"
         android:layout_width="374dp"
         android:layout_height="79dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/sendButtonCt"
@@ -60,5 +47,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sendButtonCt"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/sendButtonCt"/>
+
+    <TextView
+        android:id="@+id/headerTextViewCt"
+        android:layout_width="202dp"
+        android:layout_height="21dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputTextFieldCt"
+        app:layout_constraintEnd_toStartOf="@+id/returnHomeButtonCt"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

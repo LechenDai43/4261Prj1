@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/userNameTVFli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Karry Wang"
+        android:textColor="#555555"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:translationX="20sp"
+        android:translationY="20sp" />
+
+    <TextView
+        android:id="@+id/emailTVFli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wjk@tfboys.com"
+        android:translationX="20sp"
+        android:translationY="50sp" />
+
+    <TextView
+        android:id="@+id/relationTVFli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My boyfriend"
+        android:translationX="20sp"
+        android:translationY="70sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="90dp" />
+
+</RelativeLayout>

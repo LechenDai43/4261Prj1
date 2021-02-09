@@ -6,76 +6,87 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/headToolBarHm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="Your Name" />
-
     <EditText
         android:id="@+id/searchBarTextFieldHm"
         android:layout_width="286dp"
         android:layout_height="46dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Enter a friend name..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headToolBarHm" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/searchButtonHm"
         android:layout_width="34dp"
         android:layout_height="39dp"
-        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toEndOf="@+id/searchBarTextFieldHm"
-        app:layout_constraintTop_toBottomOf="@+id/headToolBarHm"
+        app:layout_constraintTop_toBottomOf="@+id/notificationButtonHm"
         app:srcCompat="@android:drawable/ic_search_category_default" />
 
-    <LinearLayout
-        android:id="@+id/verticalLayoutHm"
-        android:layout_width="413dp"
-        android:layout_height="561dp"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchBarTextFieldHm">
-
-    </LinearLayout>
     <ImageButton
         android:id="@+id/notificationButtonHm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/headToolBarHm"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_popup_reminder" />
+        android:background="#00FFFFFF"
+        android:foreground="@android:drawable/btn_star_big_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/notificationButtonHm2"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#00FFFFFF"
+        android:foreground="@android:drawable/btn_star_big_on"
+        app:layout_constraintBottom_toTopOf="@+id/searchButtonHm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/logOutButtonHm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="560dp"
+        android:layout_marginBottom="50dp"
         android:text="Log Out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/headerTextViewHm"
+        android:layout_width="199dp"
+        android:layout_height="25dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/searchBarTextFieldHm"
+        app:layout_constraintEnd_toStartOf="@+id/notificationButtonHm"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/verticalLayoutHm" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listViewHm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/searchBarTextFieldHm"
+        tools:layout_editor_absoluteX="57dp"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

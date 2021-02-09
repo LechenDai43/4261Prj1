@@ -8,27 +8,11 @@
     android:layout_height="match_parent"
     tools:context=".Registration">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/registrationToolBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/usernameTextViewRg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:title="Registration"/>
-
     <TextView
         android:id="@+id/usernameTextViewRg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:text="Username"
         android:textColor="#3F51B5"
         android:textSize="24sp"
@@ -40,10 +24,9 @@
         android:id="@+id/usernameTextFieldRg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:ems="10"
-       android:layout_marginTop="10dp"
         android:inputType="textPersonName"
-        android:text="Enter your username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +51,6 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Enter your email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailTextViewRg" />
@@ -116,7 +98,7 @@
         android:layout_width="270dp"
         android:layout_height="22dp"
         android:layout_marginBottom="75dp"
-        android:text="TextView"
+        android:textColor="@android:color/holo_red_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -128,7 +110,6 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Enter your password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -141,7 +122,6 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Re-enter your password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmTextViewRg" />
@@ -150,12 +130,12 @@
         android:id="@+id/returnButtonRg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:text="Return"
         app:layout_constraintBottom_toTopOf="@+id/errorMessageRg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toEndOf="@+id/registerButtonRg" />
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmTextFieldRg" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

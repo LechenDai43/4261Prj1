@@ -22,8 +22,9 @@ public class ConnectBackend {
 
             try {
                 // connect to backend
-                URL url = new URL("http://128.61.77.135/creatures.php");
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                URL url = new URL(GlobalVariables.ADDRESS + "users.php");
+                HttpURLConnection httpURLConnection = null;
+                httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoInput(true);
                 httpURLConnection.setDoOutput(true);
@@ -31,7 +32,8 @@ public class ConnectBackend {
                 // pass data to the backend
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
-                String post_data = URLEncoder.encode("id", "UTF-8") + "=" + URLEncoder.encode("lalalalalalalla", "UTF-8");
+                String post_data = URLEncoder.encode("u1", "UTF-8") + "=" + URLEncoder.encode("true", "UTF-8") + "&" +
+                        URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode("email", "UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
