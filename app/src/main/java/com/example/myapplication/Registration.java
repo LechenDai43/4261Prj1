@@ -26,6 +26,13 @@ public class Registration extends AppCompatActivity {
     }
 
     class registerListener implements View.OnClickListener {
+        public boolean isValidEmailAddress(String email) {
+            String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+            java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
+            java.util.regex.Matcher m = p.matcher(email);
+            return m.matches();
+        }
+
         @Override
         public void onClick(View v) {
             usernameTextFieldRg = (EditText) findViewById(R.id.usernameTextFieldRg);
@@ -42,7 +49,7 @@ public class Registration extends AppCompatActivity {
 
             if (username == null || username.length() < 1 || username.equals("E-mail")) {
                 errorMessage.setText("The username is invalid.");
-            } else if (email == null || email.length() < 5) {
+            } else if (email == null || email.length() < 5 || ! isValidEmailAddress(email)) {
                 errorMessage.setText("The email address is invalid.");
             } else if (password == null || password.length() < 6 || password.equals("Password")) {
                 errorMessage.setText("Please enter a valid password.");
@@ -83,4 +90,6 @@ public class Registration extends AppCompatActivity {
             startActivity(nextPage);
         }
     }
+
+
 }

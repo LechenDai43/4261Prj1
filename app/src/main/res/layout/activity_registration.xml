@@ -8,27 +8,11 @@
     android:layout_height="match_parent"
     tools:context=".Registration">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/registrationToolBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/usernameTextViewRg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:title="Registration"/>
-
     <TextView
         android:id="@+id/usernameTextViewRg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:text="Username"
         android:textColor="#3F51B5"
         android:textSize="24sp"
@@ -150,12 +134,12 @@
         android:id="@+id/returnButtonRg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:text="Return"
         app:layout_constraintBottom_toTopOf="@+id/errorMessageRg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toEndOf="@+id/registerButtonRg" />
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmTextFieldRg" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
