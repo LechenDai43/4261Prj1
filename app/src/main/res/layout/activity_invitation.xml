@@ -70,7 +70,6 @@
         android:layout_marginRight="44dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailTextViewIv" />
 

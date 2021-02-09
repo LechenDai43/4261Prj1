@@ -71,6 +71,8 @@ public class Home extends AppCompatActivity {
 
         notificationButtonHm2.setVisibility(View.GONE);
         notificationButtonHm1.setVisibility(View.VISIBLE);
+        CheckNotification cn = new CheckNotification();
+        cn.execute();
     }
 
     class OpenNotificationListener implements View.OnClickListener {
@@ -179,13 +181,28 @@ public class Home extends AppCompatActivity {
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
             String type = ((TextView)view.findViewById(R.id.relationTVFli)).getText().toString();
             if (type.equals("friend")) {
-
+                Intent nextPage = new Intent(getApplicationContext(), Chat.class);
+                nextPage.putExtra("username", username);
+                nextPage.putExtra("email", email);
+                nextPage.putExtra("othername", ((TextView)view.findViewById(R.id.userNameTVFli)).getText().toString());
+                nextPage.putExtra("otheremail", ((TextView)view.findViewById(R.id.emailTVFli)).getText().toString());
+                startActivity(nextPage);
             }
             else if (type.equals("unknown")) {
-
+                Intent nextPage = new Intent(getApplicationContext(), InviteFriend.class);
+                nextPage.putExtra("username", username);
+                nextPage.putExtra("email", email);
+                nextPage.putExtra("othername", ((TextView)view.findViewById(R.id.userNameTVFli)).getText().toString());
+                nextPage.putExtra("otheremail", ((TextView)view.findViewById(R.id.emailTVFli)).getText().toString());
+                startActivity(nextPage);
             }
             else if (type.equals("inviting")) {
-
+                Intent nextPage = new Intent(getApplicationContext(), Invitation.class);
+                nextPage.putExtra("username", username);
+                nextPage.putExtra("email", email);
+                nextPage.putExtra("othername", ((TextView)view.findViewById(R.id.userNameTVFli)).getText().toString());
+                nextPage.putExtra("otheremail", ((TextView)view.findViewById(R.id.emailTVFli)).getText().toString());
+                startActivity(nextPage);
             }
         }
     }
