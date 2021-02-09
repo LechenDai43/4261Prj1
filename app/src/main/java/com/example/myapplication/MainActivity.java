@@ -223,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
                     errorMessage.setText("Internal error...");
                     errorSet = true;
                 }
-                if (!errorSet) {
+                if (!errorSet && errorMessage != null) {
                     errorMessage.setText("Internal error...");
                     errorSet = true;
                 }
