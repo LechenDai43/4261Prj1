@@ -1,0 +1,14 @@
+# 4261Prj1 - weMessage
+weMessage is an mobile chat, that allows people leaves message to each other. 
+
+## App URL: 
+## Environment:
+- Android Studio
+- AWS RDS
+- MySQL
+
+## Dependencies：
+
+## Language:
+- Java
+- PHP
