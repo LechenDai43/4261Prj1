@@ -10,29 +10,34 @@ import android.widget.Button;
 
 import android.os.Bundle;
 
-public class Chat extends AppCompatActivity implements View.OnClickListener {
+public class Chat extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        ImageButton returnHomeButtonCt = (ImageButton) findViewById(R.id.returnHomeButtonCt);
         EditText inputTextFieldCt = (EditText) findViewById(R.id.inputTextFieldCt);
-        Button sendButtonCt = (Button) findViewById((R.id.sendButtonCt));
-    }
 
+        ImageButton returnHomeButtonCt = (ImageButton) findViewById(R.id.returnHomeButtonCt);
+        returnHomeButtonCt.setOnClickListener(new returnHomeListener());
+
+        Button sendButtonCt = (Button) findViewById((R.id.sendButtonCt));
+        sendButtonCt.setOnClickListener(new sendListener());
+
+    }
+}
+
+class returnHomeListener implements View.OnClickListener {
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.returnHomeButtonCt:
-                //return back to homepage
-                startActivity(new Intent(this, Home.class));
-                break;
 
-            case R.id.sendButtonCt:
-                // store message in database
+    }
+}
 
-        }
+class sendListener implements View.OnClickListener {
+    @Override
+    public void onClick(View v) {
+
     }
 }
