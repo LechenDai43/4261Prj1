@@ -86,6 +86,7 @@ public class InviteFriend extends AppCompatActivity {
                             URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(email, "UTF-8") + "&" +
                             URLEncoder.encode("otheremail", "UTF-8") + "=" + URLEncoder.encode(otheremail, "UTF-8") + "&" +
                             URLEncoder.encode("comment", "UTF-8") + "=" + URLEncoder.encode(comment, "UTF-8");
+                    System.out.println(otheremail);
                     bufferedWriter.write(post_data);
                     bufferedWriter.flush();
                     bufferedWriter.close();

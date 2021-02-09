@@ -22,7 +22,7 @@ else if (isset($_POST["f2"])) {
     $email = $_POST["email"];
     $key = $_POST["key"];
     
-    $query = "select id from users where email like '%".$key."%' or username like '%".$key."%' union select friend_id from `".$email."` where comment like '%".$ksy."%';";
+    $query = "select id from users where email like '%".$key."%' or username like '%".$key."%' union select friend_id from `".$email."` where comment like '%".$key."%';";
     $ids = mysqli_query($con, $query);
     
     for ($i = 0; $i < mysqli_num_rows($ids); $i++) {
@@ -42,8 +42,8 @@ else if (isset($_POST["f2"])) {
         $second_result = mysqli_query($con, $second_query);
         if (mysqli_num_rows($second_result) > 0) {
             $second_row = mysqli_fetch_row($second_result);
-            $type = second_row[0];
-            $name = second_row[1];
+            $type = $second_row[0];
+            $name = $second_row[1];
         }
         
         if (strcmp($email, $mail) !== 0) {

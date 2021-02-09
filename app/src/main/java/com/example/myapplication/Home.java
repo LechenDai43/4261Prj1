@@ -42,6 +42,7 @@ public class Home extends AppCompatActivity {
     EditText searchBarTextFieldHm;
     ImageButton notificationButtonHm1;
     ImageButton notificationButtonHm2;
+    String testee = "0";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +60,7 @@ public class Home extends AppCompatActivity {
         Button logOutButtonHm = (Button) findViewById((R.id.logOutButtonHm));
 
         logOutButtonHm.setOnClickListener(new LogoutListener());
-        searchButtonHm.setOnClickListener(new SearchFriendListener(this));
+        searchButtonHm.setOnClickListener(new SearchFriendListener(getApplicationContext()));
         notificationButtonHm1.setOnClickListener(new OpenNotificationListener());
         notificationButtonHm2.setOnClickListener(new OpenNotificationListener());
 
@@ -116,6 +117,11 @@ public class Home extends AppCompatActivity {
         ListView myListView;
 
         @Override
+        protected void onPreExecute() {
+            testee = "1";
+        }
+
+        @Override
         protected String doInBackground(String... strings) {
             if (searchBarTextFieldHm != null) {
                 String key = searchBarTextFieldHm.getText().toString();
@@ -148,6 +154,7 @@ public class Home extends AppCompatActivity {
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
                     String line = bufferedReader.readLine();
                     while (line != null) {
+                        System.out.println(line);
                         String[] parts = line.split(";");
                         if (parts.length == 3) {
                             fms.add(parts[0]);
@@ -167,6 +174,7 @@ public class Home extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String args) {
+            testee = "0";
             if (context != null && myListView != null) {
                 FriendAdapter friendAdapter = new FriendAdapter(context, nns, fms, rs);
                 myListView.setAdapter(friendAdapter);
@@ -208,7 +216,7 @@ public class Home extends AppCompatActivity {
     }
 
     class CheckNotification extends AsyncTask<String, String, String> {
-        String testee = "0";
+
 
         @Override
         protected String doInBackground(String... strings) {
@@ -216,8 +224,10 @@ public class Home extends AppCompatActivity {
                 if (testee.equals("0")) {
                     DetailCheck dc = new DetailCheck();
                     dc.execute();
+                    break;
                 }
             }
+            return null;
         }
 
         class DetailCheck extends AsyncTask<String, String, String> {
