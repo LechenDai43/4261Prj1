@@ -31,18 +31,6 @@
         app:layout_constraintTop_toBottomOf="@+id/notificationButtonHm"
         app:srcCompat="@android:drawable/ic_search_category_default" />
 
-    <LinearLayout
-        android:id="@+id/verticalLayoutHm"
-        android:layout_width="410dp"
-        android:layout_height="448dp"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchBarTextFieldHm">
-
-    </LinearLayout>
-
     <ImageButton
         android:id="@+id/notificationButtonHm"
         android:layout_width="wrap_content"
@@ -58,23 +46,32 @@
         android:id="@+id/logOutButtonHm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
         android:text="Log Out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/verticalLayoutHm"
-        app:layout_constraintVertical_bias="0.100000024" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/headerTextViewHm"
         android:layout_width="199dp"
         android:layout_height="25dp"
         android:text="TextView"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/searchBarTextFieldHm"
         app:layout_constraintEnd_toStartOf="@+id/notificationButtonHm"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listViewHm"
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBarTextFieldHm" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
