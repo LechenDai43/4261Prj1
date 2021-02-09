@@ -13,6 +13,8 @@ weMessage is an mobile chat, that allows people leaves message to each other.
 ```
 
 ## Dependencies：
+```bash
+```
 
 ## Language:
 - Java
