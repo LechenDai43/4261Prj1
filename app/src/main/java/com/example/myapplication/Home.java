@@ -17,12 +17,14 @@ import android.widget.TextView;
 import android.widget.Toolbar;
 
 public class Home extends AppCompatActivity {
+    String username = "", email = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        String username = getIntent().getExtras().getString("username");
+        username = getIntent().getExtras().getString("username");
+        email = getIntent().getExtras().getString("email");
         TextView header = (TextView) findViewById(R.id.headerTextViewHm);
         header.setText(username);
 
