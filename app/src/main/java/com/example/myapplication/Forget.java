@@ -27,7 +27,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Forget extends AppCompatActivity {
 
     EditText emailTextFieldFg;
-    Button sendEmailButtonFg;
+    Button sendEmailButtonFg, returnButtonFg;
     // StringRequest stringRequest;
 //      String URL = "";
     String sEmail;
@@ -42,6 +42,8 @@ public class Forget extends AppCompatActivity {
         sendEmailButtonFg = (Button) findViewById(R.id.sendEmailButtonFg);
         sendEmailButtonFg.setOnClickListener(new SendListener());
 
+        returnButtonFg = (Button) findViewById(R.id.returnButtonFg);
+        returnButtonFg.setOnClickListener(new returnListener());
 //        sEmail = "sherryq1125@gmail.com";// example@gmail.com
 
     }
@@ -117,7 +119,7 @@ public class Forget extends AppCompatActivity {
             emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
             emailIntent.putExtra(Intent.EXTRA_CC, CC);
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
-            emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "");
 
             try {
                 startActivity(Intent.createChooser(emailIntent, "Send mail..."));
@@ -130,5 +132,13 @@ public class Forget extends AppCompatActivity {
 
         }
     }
+    class returnListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            Intent nextPage = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(nextPage);
+        }
+    }
+
 }
 
