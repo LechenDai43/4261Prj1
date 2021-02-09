@@ -52,6 +52,7 @@
         android:layout_marginRight="30dp"
         android:background="#00FFFFFF"
         android:foreground="@android:drawable/btn_star_big_on"
+        app:layout_constraintBottom_toTopOf="@+id/searchButtonHm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

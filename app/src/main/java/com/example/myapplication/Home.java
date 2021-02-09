@@ -220,13 +220,8 @@ public class Home extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... strings) {
-            while (true) {
-                if (testee.equals("0")) {
-                    DetailCheck dc = new DetailCheck();
-                    dc.execute();
-                    break;
-                }
-            }
+            DetailCheck dc = new DetailCheck();
+            dc.execute();
             return null;
         }
 
