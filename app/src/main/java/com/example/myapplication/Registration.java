@@ -65,9 +65,9 @@ public class Registration extends AppCompatActivity {
             String password = passwordTextFieldRg.getText().toString();
             String confirmPwd = confirmTextFieldRg.getText().toString();
 
-            if (username == null || username.length() < 1 || username.equals("E-mail")) {
+            if (username == null || username.length() < 1 || username.equals("E-mail") || username.contains(";")) {
                 errorMessage.setText("The username is invalid.");
-            } else if (email == null || email.length() < 5 || ! isValidEmailAddress(email)) {
+            } else if (email == null || email.length() < 5 || ! isValidEmailAddress(email) || email.contains(";")) {
                 errorMessage.setText("The email address is invalid.");
             } else if (password == null || password.length() < 6 || password.equals("Password")) {
                 errorMessage.setText("Please enter a valid password.");
@@ -228,7 +228,7 @@ public class Registration extends AppCompatActivity {
                                 result = bufferedReader.readLine();
                             }
                             success = false;
-                            errorMessage.setText("Internal error.");
+                            errorMessage.setText("Inner internal error.");
                             setError = true;
                         }
 
@@ -258,11 +258,11 @@ public class Registration extends AppCompatActivity {
                 }
                 else {
                     if (errorMessage != null && context == null) {
-                        errorMessage.setText("Internal error...");
+                        errorMessage.setText("Outer internal error...");
                         setError = true;
                     }
                     if (!setError && errorMessage != null) {
-                        errorMessage.setText("Internal error...");
+                        errorMessage.setText("Outer internal error...");
                         setError = true;
                     }
                 }

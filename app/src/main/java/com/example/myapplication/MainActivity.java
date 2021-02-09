@@ -150,7 +150,6 @@ public class MainActivity extends AppCompatActivity {
                     InputStream inputStream =  httpURLConnection.getInputStream();
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
                     String result = bufferedReader.readLine();
-                    System.out.println(result);
 //                    while (result != null) {
 //                        System.out.println(result);
 //                        result = bufferedReader.readLine();
