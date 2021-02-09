@@ -33,14 +33,27 @@
 
     <ImageButton
         android:id="@+id/notificationButtonHm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
+        android:background="#00FFFFFF"
+        android:foreground="@android:drawable/btn_star_big_off"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_popup_reminder" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/notificationButtonHm2"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#00FFFFFF"
+        android:foreground="@android:drawable/btn_star_big_on"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/logOutButtonHm"
