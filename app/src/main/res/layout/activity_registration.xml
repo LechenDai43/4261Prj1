@@ -106,8 +106,10 @@
         android:text="Register"
         app:layout_constraintBottom_toTopOf="@+id/errorMessageRg"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmTextFieldRg" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmTextFieldRg"
+        app:layout_constraintVertical_bias="0.515" />
 
     <TextView
         android:id="@+id/errorMessageRg"
