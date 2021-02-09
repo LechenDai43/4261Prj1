@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
                     OutputStream outputStream = httpURLConnection.getOutputStream();
                     BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
-                    String post_data = URLEncoder.encode("u1", "UTF-8") + "=" + URLEncoder.encode("true", "UTF-8") +
+                    String post_data = URLEncoder.encode("u1", "UTF-8") + "=" + URLEncoder.encode("true", "UTF-8") + "&" +
                             URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(email, "UTF-8");
                     bufferedWriter.write(post_data);
                     bufferedWriter.flush();
@@ -150,6 +150,10 @@ public class MainActivity extends AppCompatActivity {
                     InputStream inputStream =  httpURLConnection.getInputStream();
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
                     String result = bufferedReader.readLine();
+//                    while (result != null) {
+//                        System.out.println(result);
+//                        result = bufferedReader.readLine();
+//                    }
                     if (result.equals("Account not find.")) {
                         success = false;
                         errorMessage.setText("This email was not found.");
