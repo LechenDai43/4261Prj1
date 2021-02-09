@@ -252,6 +252,7 @@ public class Registration extends AppCompatActivity {
                 if (success && context != null) {
                     Intent nextPage = new Intent(context, Home.class);
                     nextPage.putExtra("email", email);
+                    nextPage.putExtra("username", username);
                     errorMessage.setText("");
                     startActivity(nextPage);
                 }

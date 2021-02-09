@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
     class CheckLogIn extends AsyncTask<String, String, String> {
         EditText passwordTextField = null;
-        String email = null;
+        String email = null, username = null;
         TextView errorMessage = null;
         boolean success = false, errorSet = false;
         Context context = null;
@@ -150,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
                     InputStream inputStream =  httpURLConnection.getInputStream();
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
                     String result = bufferedReader.readLine();
+                    System.out.println(result);
 //                    while (result != null) {
 //                        System.out.println(result);
 //                        result = bufferedReader.readLine();
@@ -175,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         if (diff == 0) {
+                            username = bufferedReader.readLine();
                             success = true;
                         }
                         else {
@@ -213,6 +215,7 @@ public class MainActivity extends AppCompatActivity {
             if (success && context != null) {
                 Intent nextPage = new Intent(context, Home.class);
                 nextPage.putExtra("email", email);
+                nextPage.putExtra("username", username);
                 startActivity(nextPage);
             }
             else {
