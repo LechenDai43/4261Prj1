@@ -44,6 +44,7 @@ public class Invitation extends AppCompatActivity {
         Button decline = (Button)findViewById(R.id.declineButtonIv);
         decline.setOnClickListener(new DeclineListener());
         Button returnBtn = (Button)findViewById(R.id.returnButtonIv);
+        returnBtn.setOnClickListener(new ReturnFromInvitationListener());
 
     }
 
@@ -130,12 +131,11 @@ public class Invitation extends AppCompatActivity {
     }
 
     class DeclineConnector extends AsyncTask<String, String, String> {
-        String comment;
         Context context;
 
         @Override
         protected String doInBackground(String... strings) {
-            if (comment != null) {
+            if (true) {
                 try {
                     // connect to backend
                     URL url = new URL(GlobalVariables.ADDRESS + "invitations.php");
