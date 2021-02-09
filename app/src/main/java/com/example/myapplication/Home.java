@@ -10,6 +10,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -154,6 +155,23 @@ public class Home extends AppCompatActivity {
             if (context != null && myListView != null) {
                 FriendAdapter friendAdapter = new FriendAdapter(context, nns, fms, rs);
                 myListView.setAdapter(friendAdapter);
+                myListView.setOnItemClickListener(new ActionFriendListener());
+            }
+        }
+    }
+
+    class ActionFriendListener implements AdapterView.OnItemClickListener {
+
+        @Override
+        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            String type = ((TextView)view.findViewById(R.id.relationTVFli)).getText().toString();
+            if (type.equals("friend")) {
+
+            }
+            else if (type.equals("unknown")) {
+
+            }
+            else if (type.equals("inviting")) {
 
             }
         }
