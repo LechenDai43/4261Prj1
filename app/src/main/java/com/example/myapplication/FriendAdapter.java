@@ -24,7 +24,6 @@ public class FriendAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        System.out.println(names.size() + " from get count");
         return names == null? 0: names.size();
     }
 
@@ -48,8 +47,6 @@ public class FriendAdapter extends BaseAdapter {
         emailTVFli.setText(emails.get(i));
         TextView relationTVFli = (TextView)v.findViewById(R.id.relationTVFli);
         relationTVFli.setText(types.get(i));
-
-        System.out.println(i + " from get view");
         return v;
     }
 }
