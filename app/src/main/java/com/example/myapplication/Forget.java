@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 //import C.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -18,10 +19,10 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.*;
-import javax.mail.*;
-import javax.mail.internet.*;
+//
+//import java.util.*;
+//import javax.mail.*;
+//import javax.mail.internet.*;
 
 public class Forget extends AppCompatActivity {
 
@@ -47,6 +48,7 @@ public class Forget extends AppCompatActivity {
 
     class SendListener implements View.OnClickListener {
 
+        @SuppressLint("LongLogTag")
         @Override
         public void onClick(View view) {
 //              String email = emailTextFieldFg.getText().toString();
