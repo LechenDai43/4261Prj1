@@ -23,7 +23,7 @@
         android:id="@+id/emailTextFieldFg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="24dp"
         android:text="Enter your email"
         android:textColor="#3F51B5"
         android:textSize="20sp"
@@ -34,25 +34,24 @@
         android:id="@+id/sendEmailButtonFg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="292dp"
+        android:layout_marginBottom="288dp"
         android:text="Send"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/returnLoginFg"
+        android:id="@+id/returnButtonFg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LogIn"
+        android:layout_marginBottom="288dp"
+        android:text="Return"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
-        app:layout_constraintStart_toEndOf="@+id/sendEmailButtonFg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/emailTextFieldFg"
-        app:layout_constraintVertical_bias="0.255" />
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
