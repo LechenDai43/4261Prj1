@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class Chat extends AppCompatActivity implements View.OnClickListener {
+public class Chat extends AppCompatActivity {
     String friend = "", name = "", email = "";
 
     @Override
@@ -29,21 +29,10 @@ public class Chat extends AppCompatActivity implements View.OnClickListener {
         ImageButton returnHomeButtonCt = (ImageButton) findViewById(R.id.returnHomeButtonCt);
         EditText inputTextFieldCt = (EditText) findViewById(R.id.inputTextFieldCt);
         Button sendButtonCt = (Button) findViewById((R.id.sendButtonCt));
+
+        returnHomeButtonCt.setOnClickListener(new BackHomeListener());
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.returnHomeButtonCt:
-                //return back to homepage
-                startActivity(new Intent(this, Home.class));
-                break;
-
-            case R.id.sendButtonCt:
-                // store message in database
-
-        }
-    }
 
     class BackHomeListener implements View.OnClickListener {
 
